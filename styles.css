@@ -1,15 +1,18 @@
-/* Nature-inspired color palette */
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap');
+
+/* Warm, cozy, mature color palette */
 :root {
-    --sage: #7a9e7e;
-    --sage-light: #a4c3a2;
-    --sage-dark: #5a7c5d;
-    --cream: #f5f1e8;
-    --beige: #e8dcc4;
-    --terracotta: #c97d5d;
-    --charcoal: #3d3d3d;
-    --warm-white: #fdfbf7;
-    --shadow: rgba(61, 61, 61, 0.1);
-    --shadow-medium: rgba(61, 61, 61, 0.15);
+    --forest: #4a6b5f;
+    --forest-light: #6b8b7f;
+    --forest-dark: #3a5248;
+    --warm-bg: #faf7f2;
+    --soft-tan: #ede5d8;
+    --warm-accent: #d4a574;
+    --rich-brown: #2d2d2d;
+    --off-white: #ffffff;
+    --card-bg: #fffcf7;
+    --shadow: rgba(45, 45, 45, 0.08);
+    --shadow-medium: rgba(45, 45, 45, 0.12);
 }
 
 * {
@@ -19,10 +22,16 @@
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     line-height: 1.7;
-    color: var(--charcoal);
-    background-color: var(--cream);
+    color: var(--rich-brown);
+    background-color: var(--warm-bg);
+    font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Crimson Pro', Georgia, serif;
+    font-weight: 600;
 }
 
 .container {
@@ -36,10 +45,10 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: rgba(245, 241, 232, 0.95);
+    background-color: rgba(250, 247, 242, 0.95);
     backdrop-filter: blur(10px);
     z-index: 100;
-    border-bottom: 1px solid var(--beige);
+    border-bottom: 1px solid var(--soft-tan);
 }
 
 .nav-container {
@@ -52,9 +61,10 @@ body {
 }
 
 .logo {
-    font-size: 1.3rem;
-    font-weight: 600;
-    color: var(--sage-dark);
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--forest-dark);
+    font-family: 'Crimson Pro', serif;
 }
 
 .nav-links {
@@ -65,13 +75,14 @@ body {
 
 .nav-links a {
     text-decoration: none;
-    color: var(--charcoal);
+    color: var(--rich-brown);
     font-weight: 500;
     transition: color 0.3s ease;
+    font-size: 0.95rem;
 }
 
 .nav-links a:hover {
-    color: var(--sage);
+    color: var(--forest);
 }
 
 /* Hero Section */
@@ -95,16 +106,18 @@ body {
 .hero-title {
     font-size: 3.5rem;
     font-weight: 700;
-    color: var(--charcoal);
+    color: var(--rich-brown);
     margin-bottom: 1rem;
     line-height: 1.2;
+    font-family: 'Crimson Pro', serif;
 }
 
 .hero-subtitle {
-    font-size: 1.3rem;
-    color: var(--sage-dark);
+    font-size: 1.25rem;
+    color: var(--forest-dark);
     margin-bottom: 2.5rem;
     font-weight: 400;
+    font-family: 'Inter', sans-serif;
 }
 
 .hero-cta {
@@ -124,26 +137,26 @@ body {
 }
 
 .btn-primary {
-    background-color: var(--sage);
-    color: var(--warm-white);
+    background-color: var(--forest);
+    color: var(--off-white);
     box-shadow: 0 4px 15px var(--shadow);
 }
 
 .btn-primary:hover {
-    background-color: var(--sage-dark);
+    background-color: var(--forest-dark);
     transform: translateY(-2px);
     box-shadow: 0 6px 20px var(--shadow-medium);
 }
 
 .btn-secondary {
     background-color: transparent;
-    color: var(--sage-dark);
-    border: 2px solid var(--sage);
+    color: var(--forest-dark);
+    border: 2px solid var(--forest);
 }
 
 .btn-secondary:hover {
-    background-color: var(--sage);
-    color: var(--warm-white);
+    background-color: var(--forest);
+    color: var(--off-white);
 }
 
 /* Decorative circles */
@@ -166,7 +179,7 @@ body {
 .circle-1 {
     width: 400px;
     height: 400px;
-    background: var(--sage-light);
+    background: var(--forest-light);
     top: -100px;
     right: -100px;
 }
@@ -174,7 +187,7 @@ body {
 .circle-2 {
     width: 300px;
     height: 300px;
-    background: var(--terracotta);
+    background: var(--warm-accent);
     bottom: -50px;
     left: -50px;
 }
@@ -182,7 +195,7 @@ body {
 .circle-3 {
     width: 200px;
     height: 200px;
-    background: var(--sage);
+    background: var(--soft-tan);
     top: 50%;
     left: 10%;
 }
@@ -190,23 +203,25 @@ body {
 /* About Section */
 .about {
     padding: 6rem 0;
-    background-color: var(--warm-white);
+    background-color: var(--soft-tan);
 }
 
 .section-title {
-    font-size: 2.5rem;
-    color: var(--charcoal);
+    font-size: 2.8rem;
+    color: var(--rich-brown);
     margin-bottom: 2rem;
     text-align: center;
     position: relative;
+    font-family: 'Crimson Pro', serif;
+    font-weight: 600;
 }
 
 .section-title::after {
     content: '';
     display: block;
     width: 60px;
-    height: 4px;
-    background: var(--sage);
+    height: 3px;
+    background: var(--warm-accent);
     margin: 1rem auto 0;
     border-radius: 2px;
 }
@@ -225,7 +240,7 @@ body {
 /* Projects Section */
 .projects {
     padding: 6rem 0;
-    background-color: var(--cream);
+    background-color: var(--warm-bg);
 }
 
 .projects-grid {
@@ -236,11 +251,12 @@ body {
 }
 
 .project-card {
-    background-color: var(--warm-white);
+    background-color: var(--card-bg);
     padding: 2.5rem;
-    border-radius: 20px;
-    box-shadow: 0 4px 20px var(--shadow);
+    border-radius: 16px;
+    box-shadow: 0 2px 20px var(--shadow);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(212, 165, 116, 0.1);
 }
 
 .project-card:hover {
@@ -249,8 +265,8 @@ body {
 }
 
 .project-card.coming-soon {
-    opacity: 0.7;
-    border: 2px dashed var(--beige);
+    opacity: 0.65;
+    border: 2px dashed var(--soft-tan);
 }
 
 .project-icon {
@@ -260,14 +276,17 @@ body {
 
 .project-title {
     font-size: 1.5rem;
-    color: var(--charcoal);
+    color: var(--rich-brown);
     margin-bottom: 1rem;
+    font-family: 'Crimson Pro', serif;
+    font-weight: 600;
 }
 
 .project-description {
-    color: var(--charcoal);
+    color: var(--rich-brown);
     margin-bottom: 1.5rem;
-    line-height: 1.6;
+    line-height: 1.7;
+    opacity: 0.9;
 }
 
 .project-tags {
@@ -278,9 +297,9 @@ body {
 }
 
 .tag {
-    background-color: var(--beige);
-    color: var(--sage-dark);
-    padding: 0.3rem 0.8rem;
+    background-color: var(--soft-tan);
+    color: var(--forest-dark);
+    padding: 0.35rem 0.9rem;
     border-radius: 20px;
     font-size: 0.85rem;
     font-weight: 500;
@@ -292,20 +311,20 @@ body {
 }
 
 .project-link {
-    color: var(--sage);
+    color: var(--forest);
     text-decoration: none;
     font-weight: 600;
     transition: color 0.3s ease;
 }
 
 .project-link:hover {
-    color: var(--sage-dark);
+    color: var(--forest-dark);
 }
 
 /* Contact Section */
 .contact {
     padding: 6rem 0;
-    background-color: var(--warm-white);
+    background-color: var(--soft-tan);
     text-align: center;
 }
 
@@ -315,9 +334,9 @@ body {
 }
 
 .contact-content p {
-    font-size: 1.2rem;
+    font-size: 1.15rem;
     margin-bottom: 2rem;
-    color: var(--charcoal);
+    color: var(--rich-brown);
 }
 
 .contact-links {
@@ -332,17 +351,17 @@ body {
     align-items: center;
     gap: 0.5rem;
     padding: 1rem 2rem;
-    background-color: var(--sage);
-    color: var(--warm-white);
+    background-color: var(--forest);
+    color: var(--off-white);
     text-decoration: none;
     border-radius: 50px;
     font-weight: 600;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px var(--shadow);
+    box-shadow: 0 3px 15px var(--shadow);
 }
 
 .contact-btn:hover {
-    background-color: var(--sage-dark);
+    background-color: var(--forest-dark);
     transform: translateY(-2px);
     box-shadow: 0 6px 20px var(--shadow-medium);
 }
@@ -354,9 +373,13 @@ body {
 /* Footer */
 .footer {
     padding: 2rem 0;
-    background-color: var(--sage-dark);
-    color: var(--cream);
+    background-color: var(--forest-dark);
+    color: var(--soft-tan);
     text-align: center;
+}
+
+.footer p {
+    font-size: 0.95rem;
 }
 
 /* Responsive Design */
@@ -389,6 +412,6 @@ html {
 
 /* Selection color */
 ::selection {
-    background-color: var(--sage-light);
-    color: var(--warm-white);
+    background-color: var(--warm-accent);
+    color: var(--rich-brown);
 }

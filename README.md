@@ -50,7 +50,7 @@ git push -u origin main
 3. Under **Source**, select **main** branch
 4. Click **Save**
 
-Your site will be live at `https://yourusername.github.io` in a few minutes!
+Your site will be live at `https://elaineliu05.github.io` in a few minutes!
 
 ## ✏️ Customization
 
