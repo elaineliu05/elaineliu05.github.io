@@ -3,13 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elaine Liu - Portfolio</title>
+    <title>Elaine Liu — Portfolio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Reusable botanical sprig -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+        <defs>
+            <symbol id="leaf" viewBox="-10 -32 20 34">
+                <path d="M0 0 C 9 -7 9 -24 0 -32 C -9 -24 -9 -7 0 0 Z" fill="currentColor" fill-opacity="0.5"/>
+                <path d="M0 -3 L0 -28" stroke="currentColor" stroke-opacity="0.45" stroke-width="1.1" fill="none"/>
+            </symbol>
+            <symbol id="sprig" viewBox="0 0 150 270">
+                <path d="M74 268 C 64 210 84 180 74 128 C 68 96 80 60 73 8"
+                      stroke="currentColor" stroke-width="2.4" stroke-linecap="round"
+                      stroke-opacity="0.5" fill="none"/>
+                <g transform="translate(74 60) rotate(-42)"><use href="#leaf"/></g>
+                <g transform="translate(74 95) rotate(44)"><use href="#leaf"/></g>
+                <g transform="translate(78 130) rotate(-40)"><use href="#leaf"/></g>
+                <g transform="translate(72 165) rotate(46)"><use href="#leaf"/></g>
+                <g transform="translate(76 200) rotate(-38)"><use href="#leaf"/></g>
+                <g transform="translate(73 20) rotate(8)"><use href="#leaf"/></g>
+                <circle cx="73" cy="10" r="4.5" fill="var(--peach)" fill-opacity="0.7"/>
+            </symbol>
+        </defs>
+    </svg>
+
     <nav class="navbar">
         <div class="nav-container">
-            <h1 class="logo">Elaine Liu</h1>
+            <a href="#" class="logo">
+                <svg class="logo-mark" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+                    <use href="#leaf" transform="translate(12 22) scale(0.6)"/>
+                </svg>
+                Your Name
+            </a>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
@@ -19,66 +46,78 @@
     </nav>
 
     <section class="hero">
+        <div class="hero-decoration" aria-hidden="true">
+            <div class="blob blob-sage"></div>
+            <div class="blob blob-peach"></div>
+            <div class="blob blob-mint"></div>
+            <svg class="sprig sprig-left" viewBox="0 0 150 270"><use href="#sprig"/></svg>
+            <svg class="sprig sprig-right" viewBox="0 0 150 270"><use href="#sprig"/></svg>
+        </div>
         <div class="hero-content">
-            <h2 class="hero-title">Building intelligent systems</h2>
-            <p class="hero-subtitle">Aspiring ML Engineer exploring the data science field. Experience in real-world evaluation and deployment of machine learning models. </p>
+            <p class="hero-eyebrow">— portfolio & field notes —</p>
+            <h1 class="hero-title">Building <em>intelligent</em><br>systems, gently</h1>
+            <p class="hero-subtitle">ML engineer &amp; AI researcher exploring the quiet intersection of solar data, retrieval-augmented generation, and homegrown language models.</p>
             <div class="hero-cta">
-                <a href="#projects" class="btn btn-primary">View My Work</a>
-                <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+                <a href="#projects" class="btn btn-primary">View my work</a>
+                <a href="#contact" class="btn btn-secondary">Get in touch</a>
             </div>
         </div>
-        <div class="hero-decoration">
-            <div class="circle circle-1"></div>
-            <div class="circle circle-2"></div>
-            <div class="circle circle-3"></div>
+        <div class="wave wave-hero" aria-hidden="true">
+            <svg viewBox="0 0 1440 120" preserveAspectRatio="none"><path d="M0,64 C240,120 480,10 720,40 C960,70 1200,120 1440,56 L1440,120 L0,120 Z"/></svg>
         </div>
     </section>
 
     <section id="about" class="about">
         <div class="container">
-            <h2 class="section-title">About Me</h2>
+            <span class="section-kicker">about</span>
+            <h2 class="section-title">A little about me</h2>
             <div class="about-content">
                 <p>
-                    hi there! I'm a developer passionate about machine learning, natural language processing,
-                    and building intelligent systems. What I enjoy the most about ML is taking a difficult real-world problem, figuring out where machine learning can actually help, and turning an experimental idea into something reliable enough to be actually useful.
-
+                    Hi! I'm a developer drawn to machine learning, natural language, and the craft of
+                    building systems that feel considered. I like coaxing meaning out of messy data —
+                    lately, solar readings — and teaching models to answer thoughtfully.
                 </p>
                 <p>
-                    when i'm not coding, you can find me exploring a new cafe, or experimenting with new technologies, or at the gym :P. tell your cat i say pspsps
+                    Away from the keyboard you'll find me outdoors, buried in a research paper, or
+                    tinkering with some half-formed idea that probably won't work (but might).
                 </p>
             </div>
+        </div>
+        <div class="wave wave-about" aria-hidden="true">
+            <svg viewBox="0 0 1440 120" preserveAspectRatio="none"><path d="M0,56 C260,110 520,20 760,46 C1000,72 1220,116 1440,60 L1440,120 L0,120 Z"/></svg>
         </div>
     </section>
 
     <section id="projects" class="projects">
         <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
+            <span class="section-kicker">selected work</span>
+            <h2 class="section-title">Things I'm growing</h2>
             <div class="projects-grid">
 
-                <div class="project-card">
-                    <div class="project-icon"></div>
+                <article class="project-card">
+                    <svg class="card-leaf" viewBox="0 0 150 270" aria-hidden="true"><use href="#sprig"/></svg>
+                    <div class="project-icon">☀︎</div>
                     <h3 class="project-title">Solar Data RAG System</h3>
                     <p class="project-description">
-                        A Retrieval-Augmented Generation system for analyzing and querying solar energy data.
-                        Combines vector databases with LLMs to provide intelligent insights from complex datasets.
+                        A retrieval-augmented generation system for querying solar energy data. Pairs a
+                        vector store with an LLM to surface grounded insights from sprawling datasets.
                     </p>
                     <div class="project-tags">
                         <span class="tag">RAG</span>
                         <span class="tag">Python</span>
                         <span class="tag">Vector DB</span>
-                        <span class="tag">Solar Data</span>
+                        <span class="tag">Solar</span>
                     </div>
-                    <div class="project-links">
-                        <a href="#" class="project-link">View Project →</a>
-                    </div>
-                </div>
+                    <a href="#" class="project-link">View project →</a>
+                </article>
 
-                <div class="project-card">
-                    <div class="project-icon"></div>
-                    <h3 class="project-title">Custom LLM Development</h3>
+                <article class="project-card">
+                    <svg class="card-leaf" viewBox="0 0 150 270" aria-hidden="true"><use href="#sprig"/></svg>
+                    <div class="project-icon">❋</div>
+                    <h3 class="project-title">Homegrown LLM</h3>
                     <p class="project-description">
-                        Building and fine-tuning custom language models from scratch. Exploring architecture
-                        design, training strategies, and optimization techniques for specialized use cases.
+                        Building and fine-tuning a language model from scratch — exploring architecture
+                        choices, training strategy, and the small optimizations that quietly add up.
                     </p>
                     <div class="project-tags">
                         <span class="tag">LLM</span>
@@ -86,49 +125,53 @@
                         <span class="tag">Transformers</span>
                         <span class="tag">ML</span>
                     </div>
-                    <div class="project-links">
-                        <a href="#" class="project-link">View Project →</a>
-                    </div>
-                </div>
+                    <a href="#" class="project-link">View project →</a>
+                </article>
 
-                <div class="project-card coming-soon">
-                    <div class="project-icon"></div>
-                    <h3 class="project-title">More Coming Soon</h3>
+                <article class="project-card coming-soon">
+                    <svg class="card-leaf" viewBox="0 0 150 270" aria-hidden="true"><use href="#sprig"/></svg>
+                    <div class="project-icon">✿</div>
+                    <h3 class="project-title">More sprouting soon</h3>
                     <p class="project-description">
-                        Currently working on several exciting projects. Check back soon for updates!
+                        A few more experiments are taking root. Check back before long — they're almost
+                        ready to see sunlight.
                     </p>
-                </div>
+                </article>
 
             </div>
+        </div>
+        <div class="wave wave-projects" aria-hidden="true">
+            <svg viewBox="0 0 1440 120" preserveAspectRatio="none"><path d="M0,60 C240,116 500,16 740,48 C980,80 1200,112 1440,58 L1440,120 L0,120 Z"/></svg>
         </div>
     </section>
 
     <section id="contact" class="contact">
         <div class="container">
-            <h2 class="section-title">Let's Connect</h2>
+            <span class="section-kicker">say hello</span>
+            <h2 class="section-title">Let's connect</h2>
             <div class="contact-content">
-                <p>I'm always interested in new opportunities and collaborations.</p>
+                <p>I'm always happy to talk shop, swap ideas, or hear about something you're building.</p>
                 <div class="contact-links">
-                    <a href="elaineliu05@gmail.com" class="contact-btn">
-                        <span class="icon">📧</span>
-                        Email
+                    <a href="mailto:your.email@example.com" class="contact-btn">
+                        <span class="icon">✉</span> Email
                     </a>
-                    <a href="https://github.com/elaineliu05" class="contact-btn" target="_blank">
-                        <span class="icon">💻</span>
-                        GitHub
+                    <a href="https://github.com/yourusername" class="contact-btn" target="_blank" rel="noopener">
+                        <span class="icon">⌨</span> GitHub
                     </a>
-                    <a href="www.linkedin.com/in/elaine-liu-268960207" class="contact-btn" target="_blank">
-                        <span class="icon">💼</span>
-                        LinkedIn
+                    <a href="https://linkedin.com/in/yourusername" class="contact-btn" target="_blank" rel="noopener">
+                        <span class="icon">in</span> LinkedIn
                     </a>
                 </div>
             </div>
+        </div>
+        <div class="wave wave-contact" aria-hidden="true">
+            <svg viewBox="0 0 1440 120" preserveAspectRatio="none"><path d="M0,52 C260,106 520,18 760,44 C1000,70 1220,110 1440,58 L1440,120 L0,120 Z"/></svg>
         </div>
     </section>
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2026 Elaine Liu.</p>
+            <p>Made with curiosity, caffeine &amp; a little sunlight · © 2026 Your Name</p>
         </div>
     </footer>
 
